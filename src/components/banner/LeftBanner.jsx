@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
+
 import Media from './Media';
 
 const LeftBanner = () => {
     const [text] = useTypewriter({
-      words: ["Professional Coder.", "Full Stack Developer.", "UI Designer."],
+      words: ["Software Developer .", "Python & Django .", "Next-generation & React ."],
       loop: true,
       typeSpeed: 20,
       deleteSpeed: 10,
@@ -18,7 +19,7 @@ const LeftBanner = () => {
         <h1 className="text-6xl font-bold text-white">
           Hi, I'm <span className="text-designColor capitalize">Chris</span>
         </h1>
-        <h2 className="text-4xl font-bold text-white">
+        <h2 className="text-4xl font-bold text-white-900">
           a <span>{text}</span>
           <Cursor
             cursorBlinking="false"
