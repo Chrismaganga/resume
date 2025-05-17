@@ -19,13 +19,13 @@ module.exports = {
         titleFont: ["Montserrat", "sans-serif"],
       },
       colors: {
-        bodyColor: "#212428",
-        lightText: "#c4cfde",
-        boxBg: "linear-gradient(145deg, #1e2024, #23272b)",
+        bodyColor: "#000000",
+        lightText: "#ffffff",
+        boxBg: "linear-gradient(145deg, #000000, #1a1a1a)",
         designColor: "#ff014f",
       },
       boxShadow: {
-        shadowOne: "10px 10px 19px #1c1e22, -10px -10px 19px #262a2e",
+        shadowOne: "10px 10px 19px #000000, -10px -10px 19px #1a1a1a",
       },
     },
   },

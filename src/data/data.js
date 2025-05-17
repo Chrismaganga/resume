@@ -1,4 +1,4 @@
-import { AiFillAppstore } from "react-icons/ai";
+import { AiFillAppstore, AiOutlineFundProjectionScreen } from "react-icons/ai";
 import { FaMobile, FaGlobe} from "react-icons/fa";
 import { SiProgress, SiAntdesign } from "react-icons/si";
 
@@ -6,37 +6,38 @@ import { SiProgress, SiAntdesign } from "react-icons/si";
 export const FeaturesData = [
   {
     id: 1,
-    title: "Business Stratagy",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad",
+    icon: <AiOutlineFundProjectionScreen />,
+    title: "Business Strategy",
+    des: "Develop comprehensive business strategies that align with your goals, market opportunities, and competitive landscape to drive sustainable growth.",
   },
   {
     id: 2,
     icon: <AiFillAppstore />,
     title: "App Development",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad",
+    des: "Create powerful, scalable, and user-friendly applications using cutting-edge technologies and best practices in software development.",
   },
   {
     id: 3,
     icon: <SiProgress />,
-    title: "SEO Optimisation",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad",
+    title: "SEO Optimization",
+    des: "Implement data-driven SEO strategies to improve your online visibility, drive organic traffic, and achieve higher search engine rankings.",
   },
   {
     id: 4,
     icon: <FaMobile />,
     title: "Mobile Development",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad",
+    des: "Build responsive and intuitive mobile applications that deliver exceptional user experiences across all devices and platforms.",
   },
   {
     id: 5,
     icon: <SiAntdesign />,
     title: "UX Design",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad",
+    des: "Create engaging user experiences through thoughtful design, intuitive interfaces, and user-centered design principles.",
   },
   {
     id: 6,
     icon: <FaGlobe />,
-    title: "Hosting Websites",
-    des: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque solutahic consequuntur eum repellendus ad",
+    title: "Web Hosting",
+    des: "Provide reliable, secure, and high-performance hosting solutions to ensure your website runs smoothly and efficiently.",
   },
 ];

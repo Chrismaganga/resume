@@ -1,6 +1,6 @@
 'use client';
-import { useState, MouseEvent, useCallback } from 'react';
-import {logo} from "../../assets/index"
+import { useState, useCallback } from 'react';
+import { logo } from "../../assets/index";
 
 function throttle(func, delay) {
   let lastCall = 0;
@@ -38,23 +38,21 @@ const Card = () => {
   };
 
   return (
-    <>
-      <div
-        className='card relative h-24 w-24 transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform'
-        onMouseMove={onMouseMove}
-        onMouseLeave={onMouseLeave}
-        style={{
-          transform: `perspective(1000px) rotateX(${rotate.x}deg) rotateY(${rotate.y}deg) scale3d(1, 1, 1)`,
-          transition: 'all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s',
-        }}
-      >
-        <div className='group relative flex h-full w-full select-none items-center justify-center rounded-lg border border-gray-900 bg-gradient-to-tr from-gray-950 to-gray-900 text-sm font-light text-gray-300'>
-          <span className='text-md bg-gradient-to-t from-gray-400 to-white bg-clip-text font-bold text-transparent'>
-            <img src={logo} alt="logo" width={50} height={50} />
-          </span>
-        </div>
+    <div
+      className='card relative h-24 w-24 transition-[all_400ms_cubic-bezier(0.03,0.98,0.52,0.99)_0s] will-change-transform'
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+      style={{
+        transform: `perspective(1000px) rotateX(${rotate.x}deg) rotateY(${rotate.y}deg) scale3d(1, 1, 1)`,
+        transition: 'all 400ms cubic-bezier(0.03, 0.98, 0.52, 0.99) 0s',
+      }}
+    >
+      <div className='group relative flex h-full w-full select-none items-center justify-center rounded-lg border border-gray-900 bg-gradient-to-tr from-gray-950 to-gray-900 text-sm font-light text-gray-300'>
+        <span className='text-md bg-gradient-to-t from-gray-400 to-white bg-clip-text font-bold text-transparent'>
+          <img src={logo} alt="logo" width={50} height={50} />
+        </span>
       </div>
-    </>
+    </div>
   );
 };
 
