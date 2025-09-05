@@ -5,25 +5,122 @@
 
 @layer components{
     .bannerIcon{
-        @apply w-16 h-16 bg-black bg-opacity-25 text-gray-200 text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300;
+        @apply w-16 h-16 bg-gray-800/50 backdrop-blur-sm text-gray-200 text-xl inline-flex items-center justify-center rounded-xl shadow-lg hover:bg-gray-700/50 hover:-translate-y-1 transition-all hover:text-cyan-400 cursor-pointer duration-300 border border-gray-700/50;
     }
     .resumeLi {
-    @apply w-full h-20 bg-black bg-opacity-25 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center border-[1px] rounded-none;
-         }
-.bgOpacity {
-@apply bg-black bg-opacity-40;
-                  }
-    .contactInput{
-        @apply w-full h-12 rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300
+        @apply w-full h-20 bg-gray-800/30 backdrop-blur-sm text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-gray-700/50 duration-300 items-center border border-gray-700/50 rounded-lg;
     }
-.contactTextArea{
-    @apply w-full rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 py-2 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300 resize-none
-}
+    .bgOpacity {
+        @apply bg-gray-800/40 backdrop-blur-sm;
+    }
+    .contactInput{
+        @apply w-full h-12 rounded-lg border border-gray-600/50 bg-gray-800/50 backdrop-blur-sm text-gray-300 px-4 active:outline-none focus-visible:outline-cyan-400 outline-none focus-visible:border-cyan-400/50 duration-300 placeholder-gray-500
+    }
+    .contactTextArea{
+        @apply w-full rounded-lg border border-gray-600/50 bg-gray-800/50 backdrop-blur-sm text-gray-300 px-4 py-2 active:outline-none focus-visible:outline-cyan-400 outline-none focus-visible:border-cyan-400/50 duration-300 resize-none placeholder-gray-500
+    }
+    .gradient-text {
+        @apply bg-gradient-to-r from-cyan-400 via-blue-500 to-green-400 bg-clip-text text-transparent;
+    }
+    .gradient-bg {
+        @apply bg-gradient-to-r from-cyan-500 to-blue-500;
+    }
+    .code-highlight {
+        @apply bg-gray-900/80 backdrop-blur-sm border border-gray-700/50 rounded-xl p-6 font-mono text-sm overflow-x-auto;
+    }
+    .code-line {
+        @apply block leading-relaxed;
+    }
+    .code-keyword {
+        @apply text-cyan-400 font-semibold;
+    }
+    .code-string {
+        @apply text-green-400;
+    }
+    .code-comment {
+        @apply text-gray-500 italic;
+    }
+    .code-function {
+        @apply text-yellow-400;
+    }
+    .code-variable {
+        @apply text-blue-400;
+    }
+    .glass-effect {
+        @apply bg-gray-800/20 backdrop-blur-md border border-gray-700/30;
+    }
+    .glow-effect {
+        @apply shadow-lg shadow-cyan-400/10;
+    }
 }
 
 .active {
     color: white;
 }
+
 .scrollbar-hide::-webkit-scrollbar{
     display: none;
+}
+
+/* Custom animations */
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(0, 212, 255, 0.6); }
+}
+
+.typewriter {
+    overflow: hidden;
+    border-right: 2px solid #00d4ff;
+    white-space: nowrap;
+    animation: typewriter 2s steps(40, end), blink 0.75s step-end infinite;
+}
+
+.float {
+    animation: float 3s ease-in-out infinite;
+}
+
+.glow-hover:hover {
+    animation: glow 2s ease-in-out infinite;
+    transition: all 0.3s ease;
+}
+
+/* Particle animation */
+@keyframes particle {
+    0% { transform: translateY(0px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(-100px) rotate(360deg); opacity: 0; }
+}
+
+.particle {
+    animation: particle 4s linear infinite;
+}
+
+/* Gradient text animation */
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+    background: linear-gradient(-45deg, #00d4ff, #0066ff, #00ff88, #00d4ff);
+    background-size: 400% 400%;
+    animation: gradient-shift 3s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
